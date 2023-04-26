@@ -31,6 +31,9 @@ public class exercico_05 {
 		vPagar = (vPeca1 * nPeca1) + (vPeca2 * nPeca2);
 		
 		System.out.printf("Valor a pagar: %.2f", vPagar);
+		System.out.println(", pelas peças de código: " + cPeca1 + " e " + cPeca2);
+		
+		
 		
 		sc.close();
 	}
