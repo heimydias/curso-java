@@ -1,7 +1,7 @@
 package lista;
 import java.util.Scanner;
 
-public class exercico_04 {
+public class Exercico_04 {
 
 	public static void main(String[] args) {
 		
