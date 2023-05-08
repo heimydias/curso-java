@@ -10,14 +10,13 @@ public class Program {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		Product product = new Product();
 		System.out.println("Insira os dados do produto: ");
 		System.out.print("Name: ");
-		product.name = sc.nextLine();
+		String name = sc.nextLine();
 		System.out.print("Price: ");
-		product.price = sc.nextDouble();
-		System.out.print("Quantidade em estoque: ");
-		product.quantity = sc.nextInt();
+		double price = sc.nextDouble();
+		
+		Product product = new Product(name, price);
 		
 		System.out.println();
 		System.out.println("Dados do produto: " + product);
@@ -32,11 +31,11 @@ public class Program {
 		
 		System.out.println();
 		System.out.print("Entre com número de produtos para serem removidos do estoque: ");
-		 quantity = sc.nextInt();
-		 product.removeProducts(quantity);
+		quantity = sc.nextInt();
+		product.removeProducts(quantity);
 		 
-		 System.out.println();
-			System.out.println("Atualização dos dados: " + product);
+		System.out.println();
+		System.out.println("Atualização dos dados: " + product);
 		
 		sc.close();
 
