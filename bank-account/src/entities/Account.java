@@ -4,9 +4,7 @@ public class Account {
 	
 	private int number;
 	private String name;
-	private char caracter;
 	private double balance;
-	private double deposit;
 	
 	public Account(int number, String name) {
 		this.number = number;
@@ -25,20 +23,8 @@ public class Account {
 		this.name = name;
 	}
 
-	public char getCaracter() {
-		return caracter;
-	}
-
 	public double getBalance() {
 		return balance;
-	}
-
-	public double getDeposit() {
-		return deposit;
-	}
-
-	public void setDeposit(double deposit) {
-		this.deposit = deposit;
 	}
 	
 	public void addValue(double deposit) {
@@ -50,7 +36,7 @@ public class Account {
 	}
 	
 	public String toString() {
-		return "Account: " + number + ", Holder: " + name + ", $ " + String.format("%.2f", balance);
+		return "Account " + number + ", Holder: " + name + ", Balance $ " + String.format("%.2f", balance);
 	}
 	
 }

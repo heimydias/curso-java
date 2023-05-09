@@ -44,6 +44,8 @@ public class Program {
 		account.removeValue(withdraw);
 		System.out.println("Dados atualizados da Conta:" );
 		System.out.println(account);
+		
+		sc.close();
 
 	}
 
