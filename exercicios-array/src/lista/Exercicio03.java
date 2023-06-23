@@ -15,9 +15,9 @@ public class Exercicio03 {
 		System.out.print("Digite a quantidade de pessoas: ");
 		int numero = sc.nextInt();
 
-		Person[] vect = new Person[numero];
+		Person[] pessoas = new Person[numero];
 
-		for (int i = 0; i < vect.length; i++) {
+		for (int i = 0; i < pessoas.length; i++) {
 			System.out.printf("Dados da %da pessoa:\n", i + 1);
 			sc.nextLine();
 			System.out.print("Nome: ");
@@ -26,24 +26,25 @@ public class Exercicio03 {
 			int age = sc.nextInt();
 			System.out.print("Altura: ");
 			double height = sc.nextDouble();
-			vect[i] = new Person(name, age, height);
+			pessoas[i] = new Person(name, age, height);
 		}
 
-		double somaH = 0.0;
-		int mDezesseis = 0;
+		double somaHeight = 0.0;
+		int menorDezesseis = 0;
+	
 		List<String> names = new ArrayList<>();
 
-		for (int i = 0; i < vect.length; i++) {
-			somaH += vect[i].getHeight();
-			if (vect[i].getAge() < 16) {
-				mDezesseis += 1;
-				names.add(vect[i].getName());
+		for (int i = 0; i < pessoas.length; i++) {
+			somaHeight += pessoas[i].getHeight();
+			if (pessoas[i].getAge() < 16) {
+				menorDezesseis += 1;
+				names.add(pessoas[i].getName());
 			}
 		}
 
-		double percentual = (mDezesseis * 100) / vect.length;
+		double percentual = (menorDezesseis * 100) / pessoas.length;
 
-		double mediaH = somaH / numero;
+		double mediaH = somaHeight / numero;
 
 		System.out.printf("Altura média: %.2f\n", mediaH);
 		System.out.printf("Menores de 16 anos: %.1f%%\n", percentual);
@@ -51,6 +52,12 @@ public class Exercicio03 {
 		for (int i = 0; i < names.size(); i++) {
 			System.out.println(names.get(i));
 		};
+		
+		for (String name: names) { //para cada elemento na collection print o elemento por vez
+			System.out.println(name);
+		}
+		
+		names.forEach(System.out::println); //referência de método (pegando minha lista de nomes e para cada elemento print)
 		
 		sc.close();
 

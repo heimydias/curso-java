@@ -22,7 +22,7 @@ public class Exercicio01 {
 
 		for (int i = 0; i < vect.length; i++) {
 			if (vect[i] < 0) {
-				System.out.print(vect[i] + "\n");
+				System.out.println(vect[i]);
 			}
 		}
 
