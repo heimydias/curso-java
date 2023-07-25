@@ -2,7 +2,7 @@ package lista;
 
 import java.util.Scanner;
 
-public class Exercicio_10 {
+public class Exercicio08 {
 
 	public static void main(String[] args) {
 		
@@ -11,13 +11,13 @@ public class Exercicio_10 {
 		System.out.print("Digite um número: ");
 		int numero = sc.nextInt();
 		
+		int fatorial = 1;
+		
 		for (int i = 1; i <= numero; i++) {
-
-			int primeiro = i;
-			int segundo = i * i;
-			int terceiro = i * i * i;
-			System.out.printf("%d %d %d%n", primeiro, segundo, terceiro);
+			fatorial = fatorial * i;
 		}
+		
+		System.out.println(fatorial);
 		
 		sc.close();
 

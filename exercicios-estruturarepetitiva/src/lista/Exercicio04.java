@@ -2,17 +2,18 @@ package lista;
 
 import java.util.Scanner;
 
-public class Exercicio_09 {
+public class Exercicio04 {
 
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
-
-		System.out.print("Digite um número para encontrar seus divisores: ");
+		
+		System.out.print("Digite um número: ");
 		int numero = sc.nextInt();
 		
+		
 		for (int i = 1; i <= numero; i++) {
-			if (numero % i == 0) {
+			if (i % 2 != 0) {
 				System.out.println(i);
 			}
 		}
