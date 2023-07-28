@@ -15,4 +15,5 @@ bin/
 # Maven
 log/
 target/
-/.metadata/
+*.metadata/
+*out
