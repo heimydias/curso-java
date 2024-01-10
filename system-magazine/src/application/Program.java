@@ -5,7 +5,6 @@ import entities.Order;
 import entities.OrderItem;
 import entities.Product;
 import entities.enums.OrderStatus;
-import org.w3c.dom.ls.LSOutput;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -17,7 +16,7 @@ public class Program {
 
         Scanner sc = new Scanner(System.in);
 
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyy");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
         System.out.println("Enter cliente data:");
         System.out.print("Name: ");
